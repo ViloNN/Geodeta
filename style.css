@@ -207,7 +207,7 @@ body {
       background-color: #333;
       padding-top: 10px;
       position: absolute;
-      bottom: -317px;
+      bottom: -257px;
     }
 
     .navbar-menu a {
@@ -323,7 +323,41 @@ body {
     position: relative;
     background-color: #f0f0f0;
   }
+
+  .pikto-main {
+    display: flex;
+    justify-content: space-between;
+  }
   
+  .item {
+    text-align: center;
+  }
+  
+  .item img {
+    width: 150px; /* dostosuj szerokość zdjęcia według potrzeb */
+    height: auto; /* zachowaj proporcje zdjęcia */
+  }
+  
+  .item p {
+    margin-top: 10px; /* odstęp między zdjęciem a tekstem */
+  }
+
+  @media (max-width: 859px) {
+    .pikto-main {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 859px) {
+    .item img {
+      margin-top: 1.5em;
+    }
+  }
+
   .banner img {
     width: 100%;
     height: 35em;
@@ -338,7 +372,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #0000002a;
-     box-shadow: black 0 0 5px; 
+    /* box-shadow: black 0 0 5px;  */
     backdrop-filter: blur(2px);
     color: #ffffff;
     padding: 10px; 
@@ -355,14 +389,61 @@ body {
 
   @media (max-width: 992px) {
     .caption {
+      width: 80%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 618px) {
+    .caption {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 618px) {
+    .caption p {
+      font-size: .85em;
+    }
+  }
+
+  @media (max-width: 504px) {
+    .caption {
+      width: 70%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 504px) {
+    .caption p {
+      font-size: .7em;
+    }
+  }
+
+  @media (max-width: 468px) {
+    .caption {
       width: 60%;
-      height: 50%;
+      height: 60%;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
   }
   
+  @media (max-width: 468px) {
+    .caption p {
+      font-size: .55em;
+    }
+  }
 
   .caption p {
     font-family: 'Mukta', sans-serif;
@@ -393,12 +474,13 @@ body {
     height: 50px;
   }
 
+/* 
   img {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
+  } */
   
   .nav-links {
     display: none;
