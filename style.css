@@ -90,7 +90,7 @@ body {
   
   .navbar-menu li {
     margin: 0;
-    list-style-type: none; /* usuwa marker z odnośników */
+    list-style-type: none;
   }
   
   .navbar-menu a {
@@ -305,6 +305,15 @@ body {
     margin-top: 0;
   }
 
+  p {
+    font-size: 1.2em;
+  }
+
+  a {
+    text-decoration: none; /* Usunięcie podkreślenia */
+    color: inherit; /* Dziedziczenie koloru tekstu od rodzica */
+    }
+
   .main {
     min-height: 100vh;
     height: auto;
@@ -331,23 +340,50 @@ body {
     background-color: #f0f0f0;
   }
 
-  .pikto-main {
-    display: flex;
-    justify-content: space-between;
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.item {
+  flex: 0 1 calc(25% - 20px);
+  margin: 50px;
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item p {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
-  
   .item {
-    text-align: center;
+      flex-basis: calc(50% - 20px);
+      margin: 5px; /* Mniejszy odstęp w pionie */
   }
-  
-  .item img {
-    width: 150px; /* dostosuj szerokość zdjęcia według potrzeb */
-    height: auto; /* zachowaj proporcje zdjęcia */
+}
+
+/* Media query dla telefonów */
+@media (max-width: 480px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  .item p {
-    margin-top: 10px; /* odstęp między zdjęciem a tekstem */
+  .item {
+      flex-basis: calc(100% - 20px);
+      margin: 5px; /* Mniejszy odstęp w pionie */
   }
+}
 
   @media (max-width: 859px) {
     .pikto-main {
@@ -419,7 +455,7 @@ body {
   }
 
   @media (max-width: 504px) {
-    .caption {
+    .caption{
       width: 70%;
       height: 60%;
       display: flex;
@@ -451,7 +487,8 @@ body {
   }
 
   .caption p {
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
     text-align: center;
   }
   
@@ -478,14 +515,6 @@ body {
   .nav-logo img {
     height: 50px;
   }
-
-/* 
-  img {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  } */
   
   .nav-links {
     display: none;
@@ -563,13 +592,22 @@ body {
     text-align: center;
   }
 
-  .content h1, h3, li {
+  .content li {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 1200;
   }
 
-  .text-main {
+  .content h1, h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal; 
+  } 
+
+  a {
     font-family: 'Sarabun', sans-serif;
+  }
+
+  .text-main {
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: .3;
   }
 
@@ -591,14 +629,40 @@ body {
     padding: 5px 0;
   }
 
+  /* Mapa Google - responsywność */
+  .map-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Zachowaj proporcje 16:9 dla mapy */
+    height: 0;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .map-container {
+        padding-bottom: 75%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        padding-bottom: 150%; 
+    }
+}
+
   h1 {
-    /* font-size: clamp(.6rem, 1.5vmax, 3.1rem); */
     font-size: 2.2em;
     margin-bottom: 0;
   }
 
   h3 {
-    /* font-size: clamp(.6rem, 1.5vmax, 3.1rem); */
     font-size: 2em;
   }
 
