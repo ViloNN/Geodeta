@@ -109,6 +109,23 @@ body {
   }
 
 
+  .shortcuts ul {
+      list-style-type: none;
+      padding: 0;
+  }
+    
+  .shortcuts li {
+      display: inline-block;
+      margin-left: auto;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 1600px) {
+      .shortcuts li:nth-child(2), li:nth-child(3){
+        display: none;
+    }
+    }
+
   .toggle {
     width: 35px;
     height: 35px;
@@ -445,7 +462,7 @@ body {
 
   @media (max-width: 618px) {
     .caption p {
-      font-size: .85em;
+      font-size: 1em;
     }
   }
 
@@ -461,7 +478,7 @@ body {
 
   @media (max-width: 504px) {
     .caption p {
-      font-size: .7em;
+      font-size: 0.88em;
     }
   }
 
@@ -477,7 +494,7 @@ body {
   
   @media (max-width: 468px) {
     .caption p {
-      font-size: .55em;
+      font-size: .70em;
     }
   }
 
@@ -695,103 +712,6 @@ body {
     color: white;
     width: 90%;
   }
-
-
-
-
-
-  .test{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 auto;
-    padding: 5px;
-  } 
-
-.block {
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-}
-
-.block1 {
-  background-color: #bdbebd
-}
-
-.block2 {
-  background-color: whitesmoke;
-}
-
-.block3 {
-  background-color: #bdbebd
-}
-
-.blocks {
-    position: absolute;
-    top: 17%;  /* Dodany margines z góry, aby bloki nie były zbyt blisko górnej krawędzi */
-    left: 12%;
-    display: flex;
-    flex-direction: column;
-}
-
-.block1, .block2, .block3 {
-    width: 9em;  /* Zwiększone rozmiary bloku */
-    height: 3.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;  /* Grubsza i ciemniejsza ramka */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;  /* Dodana animacja dla cienia */
-    color: black;  /* Biały kolor tekstu w bloku */
-    font-size: 20px;
-}
-
-.block1:last-child, .block2:last-child, .block3:last-child {
-    margin-bottom: 0;
-}
-
-.block1:hover, .block2:hover, .block3:hover {
-    transform: translateY(-5px);  /* Przesunięcie bloku w górę podczas najechania */
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);  /* Intensywniejszy cień podczas najechania */
-}
-
-
-
-@media only screen and (max-width: 1300px) {
-
-  .blocks {
-      position: absolute;
-      top: auto;
-      bottom: 20px; /* Ustawienie bloków przy dolnej krawędzi banera */
-      left: 50%;
-      transform: translateX(-50%); /* Wyśrodkowanie bloków poziomo */
-      flex-direction: row; /* Bloki w poziomie zamiast pionu */
-  }
-
-  .block1, .block2, .block3 {
-      width: 20vh;
-      height: 10vh;
-      margin-right: 15px; /* Dodanie marginesu po prawej stronie dla każdego bloku */
-      margin-bottom: 0;   /* Usunięcie marginesu na dole, który był potrzebny w układzie pionowym */
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .block:last-child {
-      margin-right: 0; /* Usunięcie marginesu dla ostatniego bloku */
-  }
-}
-
-
-
-
-
 
 .custom-container {
   display: flex;
