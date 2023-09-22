@@ -108,6 +108,10 @@ body {
     text-decoration: none;
   }
 
+  .shortcuts a{
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+  }
 
   .shortcuts ul {
       list-style-type: none;
