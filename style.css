@@ -131,6 +131,18 @@ body {
     }
     }
 
+    @media screen and (min-width: 1000px) {
+      .shortcuts li:nth-child(1){
+        font-size: 0.7em;
+    }
+    }
+
+    @media screen and (min-width: 1050px) {
+      .shortcuts li:nth-child(1){
+        font-size: 1em;
+    }
+    }
+
     @media (max-width: 1600px) {
       .shortcuts li:nth-child(2), .shortcuts li:nth-child(3){
         display: none;
@@ -248,9 +260,9 @@ body {
       left: 0;
       width: 100%;
       background-color: #333;
-      padding-top: 10px;
+      margin-top: 10px;
       position: absolute;
-      bottom: -257px;
+      bottom: -303px;
     }
 
     .navbar-menu a {
