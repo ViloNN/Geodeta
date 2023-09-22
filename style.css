@@ -131,8 +131,8 @@ body {
     }
     }
 
-    @media screen and (max-width: 1600px) {
-      .shortcuts li:nth-child(2), li:nth-child(3){
+    @media (max-width: 1600px) {
+      .shortcuts li:nth-child(2), .shortcuts li:nth-child(3){
         display: none;
     }
     }
@@ -688,13 +688,9 @@ body {
     font-size: 1.2em;
   }
 
-  .test {
-    font-family: 'Sarabun', sans-serif;
-    font-weight: 100;
-    padding: 5px 0;
-    font-size: 1.2em;
-  }
-  
+
+
+
   /* Ustawienia dla stopki */
   
   footer {
